@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="session_view_form" model="ir.ui.view">
+        <field name="name">session.view.form</field>
+        <field name="model">motorcycle.session</field>
+        <field name="arch" type="xml">
+            <form string="Motorcycle Session Form">
+                <header></header>
+                <sheet>
+                    <group>
+                        <separator string="Registry Information"/>
+                        <field name="registry_number"/>                        
+                        <field name="vin"/>
+                        <field name="license_plate"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="session_view_list" model="ir.ui.view">
+        <field name="name">session.view.list</field>
+        <field name="model">motorcycle.session</field>
+        <field name="arch" type="xml">
+            <tree string="Motorcycle Session List">
+                <field name="registry_number"/>
+                <field name="vin"/>
+                <field name="license_plate"/>
+            </tree>
+        </field>        
+    </record>
+
+
+    <record id="session_view_search" model="ir.ui.view">
+        <field name="name">session.view.list</field>
+        <field name="model">motorcycle.session</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="registry_number"/>
+                <field name="vin"/>
+                <field name="license_plate"/>
+            </search>
+        </field>   
+    </record>
+</odoo>
