@@ -14,6 +14,7 @@
                             <separator string="Customer Information"/>
                             <field name="first_name"/>
                             <field name="last_name"/>
+                            <field name="email"/>
                             <field name="date_registry"/>
                         </group>
                         <group>
@@ -37,26 +38,28 @@
     <record id="motorcycle_registry_view_list" model="ir.ui.view">
         <field name="name">registry.view.list</field>
         <field name="model">motorcycle.registry</field>
-        <field name="arch" type="xml">
+        <field name="arch" type="xml">            
             <tree string="Motorcycle Registry List">
                 <field name="registry_number"/>
                 <field name="vin"/>
                 <field name="license_plate"/>
                 <field name="first_name"/>
                 <field name="last_name"/>
+                <field name="email"/>
             </tree>
         </field>        
     </record>
 
 
     <record id="motorcycle_registry_view_search" model="ir.ui.view">
-        <field name="name">registry.view.list</field>
+        <field name="name">registry.view.search</field>
         <field name="model">motorcycle.registry</field>
         <field name="arch" type="xml">
             <search>
                 <field name="registry_number"/>
                 <field name="vin"/>
                 <field name="last_name"/>
+                <field name="email"/>
                 <field name="license_plate"/>
                 <filter name="filter_registry_date" date="date_registry" string="Registration Date"/>
                 <filter name="groupby_registry_date" string="Registration Date" 

@@ -8,10 +8,21 @@
                 <header></header>
                 <sheet>
                     <group>
-                        <separator string="Registry Information"/>
-                        <field name="registry_number"/>                        
-                        <field name="vin"/>
-                        <field name="license_plate"/>
+                        <group>
+                            <separator string="Motorcycle Information"/>
+                            <field name="registry_number"/>                        
+                            <field name="vin"/>
+                            <field name="vin_make"/>
+                            <field name="vin_model"/> 
+                            <field name="vin_year"/>                               
+                            <field name="license_plate"/>
+                        </group>
+                        <group>
+                            <separator string="Owner Information"/>
+                            <field name="owner_id"/>
+                            <field name="owner_email"/>
+                            <field name="owner_phone"/>
+                        </group>
                     </group>
                 </sheet>
             </form>
@@ -26,6 +37,8 @@
                 <field name="registry_number"/>
                 <field name="vin"/>
                 <field name="license_plate"/>
+                <field name="owner_email"/>
+                <field name="owner_phone"/>
             </tree>
         </field>        
     </record>

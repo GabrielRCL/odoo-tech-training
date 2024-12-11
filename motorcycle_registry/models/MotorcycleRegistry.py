@@ -10,6 +10,7 @@ class MotorcycleRegistry(models.Model):
     date_registry = fields.Date(index=True)
     first_name = fields.Char(string="First Name", required=True)
     last_name = fields.Char(string="Last Name", required=True)
+    email = fields.Char(string="Email")
     license_plate = fields.Char(string="license_plate")
     registry_number = fields.Char(string="registry_number", required=True)
     vin = fields.Char(string="VIN")
