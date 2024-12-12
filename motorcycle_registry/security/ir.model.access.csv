@@ -1,5 +1,3 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
 motorcycle_registry_admin,registry admin,model_motorcycle_registry,group_motorcycle_registry_admin,1,1,1,1
 motorcycle_registry_user,registry user,model_motorcycle_registry,group_motorcycle_registry_user,1,0,1,0
-session_admin,session admin,model_motorcycle_session,group_motorcycle_registry_admin,1,1,1,1
-session_user,session user,model_motorcycle_session,group_motorcycle_registry_user,1,0,1,0

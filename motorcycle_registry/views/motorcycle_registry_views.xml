@@ -11,17 +11,20 @@
                 <sheet>
                     <group>
                         <group>
-                            <separator string="Customer Information"/>
-                            <field name="first_name"/>
-                            <field name="last_name"/>
-                            <field name="email"/>
-                            <field name="date_registry"/>
+                            <separator string="Motorcycle Information"/>
+                            <field name="date_registry"/>                        
+                            <field name="vin"/>
+                            <field name="vin_make"/>
+                            <field name="vin_model"/> 
+                            <field name="vin_year"/>
+                            <field name="current_mileage"/>                               
+                            <field name="license_plate"/>
                         </group>
                         <group>
-                            <separator string="Registry Information"/>
-                            <field name="current_mileage"/>
-                            <field name="license_plate"/>
-                            <field name="vin"/>
+                            <separator string="Owner Information"/>
+                            <field name="owner_id"/>
+                            <field name="owner_email"/>
+                            <field name="owner_phone"/>
                         </group>
                     </group>
                     
@@ -40,12 +43,12 @@
         <field name="model">motorcycle.registry</field>
         <field name="arch" type="xml">            
             <tree string="Motorcycle Registry List">
-                <field name="registry_number"/>
+                <field name="registry_number"/> 
                 <field name="vin"/>
-                <field name="license_plate"/>
-                <field name="first_name"/>
-                <field name="last_name"/>
-                <field name="email"/>
+                <field name="license_plate"/>                               
+                <field name="owner_id"/>
+                <field name="owner_email" optional="hide"/>
+                <field name="owner_phone" optional="hide"/>
             </tree>
         </field>        
     </record>
@@ -58,8 +61,7 @@
             <search>
                 <field name="registry_number"/>
                 <field name="vin"/>
-                <field name="last_name"/>
-                <field name="email"/>
+                <field name="owner_id"/>
                 <field name="license_plate"/>
                 <filter name="filter_registry_date" date="date_registry" string="Registration Date"/>
                 <filter name="groupby_registry_date" string="Registration Date" 
