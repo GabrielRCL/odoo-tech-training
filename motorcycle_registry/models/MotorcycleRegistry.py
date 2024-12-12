@@ -24,14 +24,13 @@ class MotorcycleRegistry(models.Model):
     owner_phone = fields.Char(related="owner_id.phone")
 
     certificate_title = fields.Binary(string="Certificate Title")    
-
     
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
             if vals.get('registry_number', ('MRN0000')) == ('MRN0000'):
                 vals['registry_number'] = self.env['ir.sequence'].next_by_code('registry.number')
-            return super().create(vals_list)
+        return super().create(vals_list)
 
         
     @api.depends("vin")
