@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <menuitem id="menu_motorcycle_stock_drop" parent="motorcycle_registry.menu_motorcycle_registry" name="Sales" sequence="1">
-        <menuitem id="menu_drop_stock" name="Products" sequence="2" action="sale.product_template_action"/>
+        <menuitem id="menu_drop_stock" name="Motorcycle" sequence="2" action="sale.product_template_action"/>
     </menuitem>
 </odoo>

@@ -24,6 +24,7 @@ Long description of module's purpose
     # always loaded
     'data': [
         'views/motorcycle_stock_menuitems.xml',
+        'views/product_template_views.xml',        
     ],
     # only loaded in demonstration mode
     'demo': [
