@@ -28,11 +28,14 @@ class ProductTemplate(models.Model):
     #product_type
     detailed_type = fields.Selection(
         selection_add=[('motorcycle', 'Motorcycle')], 
-        ondelete={'motorcycle': 'set service'}
+        ondelete={'motorcycle': 'set default'}
+    )
+    type = fields.Selection(
+        selection_add=[('motorcycle', 'Motorcycle')]
     )
 
     def _detailed_type_mapping(self):
         type_mapping = super()._detailed_type_mapping()
-        type_mapping['motorcycle'] = 'service'
+        type_mapping['motorcycle'] = 'motorcycle'
         return type_mapping
         
